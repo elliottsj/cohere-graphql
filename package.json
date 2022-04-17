@@ -1,6 +1,7 @@
 {
 	"name": "cohere-graphql",
 	"version": "0.0.1",
+	"type": "module",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -12,15 +13,22 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
-	"devDependencies": {
+	"dependencies": {
+		"@fontsource/fira-mono": "^4.5.0",
+		"@graphql-yoga/common": "^2.3.0",
+		"@lukeed/uuid": "^2.0.0",
+		"@pothos/core": "^3.7.0",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.47",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.4.1",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
+		"cohere-ai": "^3.2.0",
+		"cookie": "^0.4.1",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"graphql": "^16.3.0",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
 		"svelte": "^3.46.0",
@@ -28,11 +36,5 @@
 		"svelte-preprocess": "^4.10.1",
 		"tslib": "^2.3.1",
 		"typescript": "~4.6.2"
-	},
-	"type": "module",
-	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0",
-		"@lukeed/uuid": "^2.0.0",
-		"cookie": "^0.4.1"
 	}
 }
