@@ -50,6 +50,8 @@ This GraphQL API is a simple wrapper around [Cohere's Generate API](https://docs
    }
    ```
 
+![Screenshot](screenshot.png)
+
 ## Developing
 
 ```shell
