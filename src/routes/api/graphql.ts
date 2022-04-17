@@ -155,7 +155,6 @@ builder.queryType({
       },
       type: [Generation],
       resolve: async (_parent, args, context) => {
-        console.log('context', context);
         const { cohere } = context;
         const generations = await cohere.generate(args.model, {
           prompt: args.prompt,
@@ -189,7 +188,8 @@ const yogaApp = createServer({
     }
     cohere.init(authorization.replace('Bearer ', ''));
     return { cohere };
-  }
+  },
+  maskedErrors: false
 });
 
 export { yogaApp as get, yogaApp as post };
