@@ -9,7 +9,7 @@
 <section>
   <h1>Cohere GraphQL</h1>
   <p>
-    <a href="/api/graphql">Visit the GraphiQL Playground</a>
+    <a rel="external" href="/api/graphql">Visit the GraphiQL Playground</a>
   </p>
   <p>
     See the <a href="https://github.com/elliottsj/cohere-graphql/blob/main/README.md">README</a> for
