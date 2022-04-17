@@ -1,5 +1,4 @@
 import { createServer, GraphQLYogaError } from '@graphql-yoga/common';
-
 import SchemaBuilder from '@pothos/core';
 import cohere from 'cohere-ai';
 
@@ -172,8 +171,7 @@ builder.queryType({
             stop_sequences: args.stopSequences
           })
         });
-        const g = generations.body['generations'];
-        return g;
+        return generations.body['generations'];
       }
     })
   })

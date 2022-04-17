@@ -1,38 +1,65 @@
-# create-svelte
+# cohere-graphql
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Proof-of-concept of a GraphQL API for Cohere.
 
-## Creating a project
+This GraphQL API is a simple wrapper around [Cohere's Generate API](https://docs.cohere.ai/generate-reference).
 
-If you're seeing this, you've probably already done this step. Congrats!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Felliottsj%2Fcohere-graphql)
 
-```bash
-# create a new project in the current directory
-npm init svelte
+## Usage
 
-# create a new project in cohere-graphql
-npm init svelte cohere-graphql
-```
+1. Visit `/api/graphql`.
+2. Click **REQUEST HEADERS** and enter:
+
+   ```json
+   {
+     "Authorization": "Bearer <your-api-key>"
+   }
+   ```
+
+   Where `<your-api-key>` is your API key from https://os.cohere.ai/.
+
+3. Make a GraphQL query, e.g.:
+
+   ```graphql
+   query Generate($model: String!, $prompt: String!, $maxTokens: Int!) {
+     generations(
+       model: $model
+       prompt: $prompt
+       maxTokens: $maxTokens
+       returnLikelihoods: GENERATION
+     ) {
+       id
+       text
+       likelihood
+       tokenLikelihoods {
+         token
+         likelihood
+       }
+     }
+   }
+   ```
+
+   With **QUERY VARIABLES**:
+
+   ```json
+   {
+     "model": "large",
+     "prompt": "My name is",
+     "maxTokens": 10
+   }
+   ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```shell
+pnpm install
 ```
 
-## Building
+Run in development mode:
 
-To create a production version of your app:
-
-```bash
-npm run build
+```shell
+pnpm dev
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+See [package.json](package.json) for other commands.
