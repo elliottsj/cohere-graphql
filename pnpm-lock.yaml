@@ -3,7 +3,6 @@ lockfileVersion: 5.3
 specifiers:
   '@fontsource/fira-mono': ^4.5.0
   '@lukeed/uuid': ^2.0.0
-  '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-netlify': ^1.0.0-next.51
   '@sveltejs/kit': next
   '@types/cookie': ^0.4.1
@@ -27,7 +26,6 @@ dependencies:
   cookie: 0.4.2
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.34
   '@sveltejs/adapter-netlify': 1.0.0-next.51
   '@sveltejs/kit': 1.0.0-next.314_svelte@3.47.0
   '@types/cookie': 0.4.1
@@ -147,33 +145,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.34:
-    resolution: {integrity: sha512-BzZVfy39idFojauroLrE/v9paJ1/HOlS2R857ooCwaLg+RrRy6zJHWwYxNSv5e8AaZiVg7ioZZpU/2g6ZgUpaQ==}
-    dependencies:
-      '@sveltejs/adapter-cloudflare': 1.0.0-next.17
-      '@sveltejs/adapter-netlify': 1.0.0-next.51
-      '@sveltejs/adapter-vercel': 1.0.0-next.47
-    dev: true
-
-  /@sveltejs/adapter-cloudflare/1.0.0-next.17:
-    resolution: {integrity: sha512-B2ze5L0LsHFsZctVNy4sw0XxgV2YiVEHyMrWRo3pmpTwpu6GT5V3U2fsEoCMg/RKMazlWkyKTCuUqmcpYjjf2g==}
-    dependencies:
-      esbuild: 0.14.36
-      worktop: 0.8.0-next.12
-    dev: true
-
   /@sveltejs/adapter-netlify/1.0.0-next.51:
     resolution: {integrity: sha512-P7/cW/0z8zd8J6DOI2yxKZG0+HRMMuzfOf0yzFXX0vRwBePhKlZ/H4qhTOo2NrCmj3Len545o+ugj5gyMXl1+g==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.14.36
       tiny-glob: 0.2.9
-    dev: true
-
-  /@sveltejs/adapter-vercel/1.0.0-next.47:
-    resolution: {integrity: sha512-VV3vP8KqL9XOc7xfQLVhXTM5jrTme+r1qJy98u5/dhAhkdjqrGDwAKo/s7MoB3rTYxLb2b8I4QxAaoz2Y2aIBg==}
-    dependencies:
-      esbuild: 0.14.36
     dev: true
 
   /@sveltejs/kit/1.0.0-next.314_svelte@3.47.0:
@@ -1292,11 +1269,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mrmime/1.0.0:
-    resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
-    engines: {node: '>=10'}
-    dev: true
-
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
@@ -1418,11 +1390,6 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
-    dev: true
-
-  /regexparam/2.0.0:
-    resolution: {integrity: sha512-gJKwd2MVPWHAIFLsaYDZfyKzHNS4o7E/v8YmNf44vmeV2e4YfVoDToTOKTvE7ab68cRJ++kLuEXJBaEeJVt5ow==}
-    engines: {node: '>=8'}
     dev: true
 
   /regexpp/3.2.0:
@@ -1810,14 +1777,6 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /worktop/0.8.0-next.12:
-    resolution: {integrity: sha512-ZXdgI9XOf0uB4IegFoViLdQ0Bf7hish0XMHwuV3nopOXygfLJkwAC5+HyA+sihBMSM2sLLQ5uGnD5aknL8+NQg==}
-    engines: {node: '>=12'}
-    dependencies:
-      mrmime: 1.0.0
-      regexparam: 2.0.0
     dev: true
 
   /wrappy/1.0.2:
