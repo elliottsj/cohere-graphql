@@ -10,7 +10,7 @@ const builder = new SchemaBuilder<{
 
 interface TokenLikelihoodShape {
   token: string;
-  likelihood: number;
+  likelihood?: number;
 }
 
 const TokenLikelihood = builder.objectRef<TokenLikelihoodShape>('TokenLikelihood');
@@ -57,6 +57,7 @@ builder.objectType(TokenLikelihood, {
     }),
     likelihood: t.float({
       description: 'The log-likelihood of the token',
+      nullable: true,
       resolve: (parent) => parent.likelihood
     })
   })
