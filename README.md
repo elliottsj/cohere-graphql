@@ -29,7 +29,6 @@ This GraphQL API is a simple wrapper around [Cohere's Generate API](https://docs
        maxTokens: $maxTokens
        returnLikelihoods: GENERATION
      ) {
-       id
        text
        likelihood
        tokenLikelihoods {
