@@ -190,6 +190,11 @@ const yogaApp = createServer({
     cohere.init(authorization.replace('Bearer ', ''));
     return { cohere };
   },
+  cors: {
+    origin: ['*'],
+    credentials: true,
+    methods: ['POST']
+  },
   maskedErrors: false
 });
 
